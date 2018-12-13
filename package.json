@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@makercam/makercam": "^0.0.3",
+    "@makercam/makercam": "0.0.4",
     "makerjs": "^0.13.0",
     "makerjs-raster": "^1.0.1"
   },

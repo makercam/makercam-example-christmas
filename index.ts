@@ -1,4 +1,5 @@
-import { cam, cnc, IAnyOperation, make, makerjs } from '@makercam/makercam'
+import { cam, cnc, IAnyOperation, make } from '@makercam/makercam'
+import makerjs from 'makerjs'
 
 const { feed, log, METRIC, rapid, units } = cam
 const fs = require('fs')
@@ -6,9 +7,9 @@ const fs = require('fs')
 function draw() {
     const bigBall = make.ellipse(18, 18)
     const hanger = make.move(make.ellipse(4, 4), [0, 18 + 4 / 2])
-    const ballInside = make.clipperOffset(bigBall, -2)
+    const ballInside = make.offset(bigBall, -2)
     ballInside.layer = 'BallInside'
-    const hangerInside = make.clipperOffset(hanger, -2)
+    const hangerInside = make.offset(hanger, -2)
     hangerInside.layer = 'HangerInside'
     const ballAndHanger = make.union(bigBall, hanger)
     ballAndHanger.layer = 'BallAndHanger'
@@ -83,7 +84,7 @@ function gcode() {
         {
             ...operationsCommon,
             id: 'Pocket',
-            layers: ['HangerInside'],
+            layers: ['HangerInside', 'TajMahalTop', 'TajMahalBottom', 'TajMahalDoor'],
             type: 'pocket',
             stockToLeave: 0,
         },
