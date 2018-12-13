@@ -1,0 +1,22 @@
+{
+  "name": "gcode-christmas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@makercam/makercam": "^0.0.3",
+    "makerjs": "^0.13.0",
+    "makerjs-raster": "^1.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "start": "tsc -w & parcel index.html & wait",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
