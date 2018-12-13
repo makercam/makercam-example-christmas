@@ -77,14 +77,14 @@ function gcode() {
     const operationsCommon = {
         tool: tools['1mmflatendmill'],
         depth: 1.75,
-        depthPerPass: 1,
+        depthPerPass: 1.75,
         zSafe: 3
     }
     const operations: IAnyOperation[] = [
         {
             ...operationsCommon,
             id: 'Pocket',
-            layers: ['HangerInside', 'TajMahalTop', 'TajMahalBottom', 'TajMahalDoor'],
+            layers: ['HangerInside'],
             type: 'pocket',
             stockToLeave: 0,
         },

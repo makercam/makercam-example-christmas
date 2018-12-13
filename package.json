@@ -1,6 +1,6 @@
 {
-  "name": "gcode-christmas",
-  "version": "makercam-example-christmas",
+  "name": "makercam-example-christmas",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
